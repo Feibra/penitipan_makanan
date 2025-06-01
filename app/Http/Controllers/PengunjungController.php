@@ -43,6 +43,7 @@ public function catatanPengunjung(Request $request)
     // Cek apakah ada keyword search
     if ($request->has('search') && $request->search != '') {
         $query->where('nama_barang', 'like', '%' . $request->search . '%')
+              ->orwhere('tanggal', 'like', '%' . $request->search . '%')
               ->orWhere('deskripsi', 'like', '%' . $request->search . '%');
     }
 

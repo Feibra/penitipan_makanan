@@ -30,7 +30,7 @@
                         <tr>
                             <th>Toko</th>
                             <th>Nama</th>
-                            <th>Date</th></th>
+                            <th>Tanggal</th></th>
                             <th>Deskripsi</th>
                             <th>Aksi</th>
                         </tr>
