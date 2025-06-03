@@ -4,7 +4,7 @@
 <div class="container mt-4 mb-4">
     <div class="card shadow-sm border-0">
         <div class="card-body">
-            <h2 class="mb-4 text-primary">📝 Tambah Catatan Barang</h2>
+            <h2 class="mb-4 text-primary">📝 Edit Catatan Barang</h2>
 
             <form action="{{ route('catatan.update', $catatan->id) }}" method="POST">
                 @csrf
