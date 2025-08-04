@@ -6,7 +6,7 @@
     <!-- Tombol Lihat Toko -->
     <div class="text-center mb-3">
         <button class="btn btn-success btn-lg px-4 shadow-sm" data-bs-toggle="collapse" data-bs-target="#tabelToko">
-            👀 Lihat Daftar Toko
+            Lihat Daftar Toko
         </button>
     </div>
 
@@ -38,7 +38,7 @@
     <!-- Tombol Lihat Catatan -->
     <div class="text-center mb-3">
         <button class="btn btn-primary btn-lg px-4 shadow-sm" data-bs-toggle="collapse" data-bs-target="#tabelCatatan">
-            👀 Lihat Catatan Barang
+            Lihat Catatan Barang
         </button>
     </div>
 
@@ -78,6 +78,6 @@
 
 @section('footer')
 <footer class="text-center py-4 bg-white shadow mt-auto">
-    <p class="mb-0 text-muted">&copy; 2025 <strong>Catatan Penjualan</strong> | Powered by Laravel</p>
+    <p class="mb-0 text-muted">&copy; 2025 <strong>Catatan Penjualan</strong></p>
 </footer>
 @endsection

@@ -6,7 +6,7 @@
     <!-- Tombol Lihat Toko -->
     <div class="text-center mb-3">
         <button class="btn btn-outline-success" data-bs-toggle="collapse" data-bs-target="#tabelToko">
-            👀 Daftar Toko
+            Daftar Toko
         </button>
     </div>
 
@@ -14,7 +14,7 @@
     <div id="tabelToko" class="collapse">
         <div class="card shadow-sm mb-4">
             <div class="card-header bg-success text-white">
-                <h5 class="mb-0">📚 Daftar Toko</h5>
+                <h5 class="mb-0">Daftar Toko</h5>
             </div>
             <div class="card-body">
                 <table class="table table-striped table-bordered table-hover">
@@ -38,7 +38,7 @@
     <!-- Tombol Lihat Catatan -->
     <div class="text-center mb-3">
         <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#tabelCatatan">
-            👀 Daftar Catatan Barang
+            Daftar Catatan Barang
         </button>
     </div>
 
@@ -46,7 +46,7 @@
     <div id="tabelCatatan" class="collapse">
         <div class="card shadow-sm mb-4">
             <div class="card-header bg-primary text-white">
-                <h5 class="mb-0">📘 Daftar Catatan Barang</h5>
+                <h5 class="mb-0">Daftar Catatan Barang</h5>
             </div>
             <div class="card-body">
                 <table class="table table-striped table-bordered table-hover">
@@ -77,6 +77,6 @@
 
 @section('footer')
     <footer class="text-center py-4 shadow mt-auto">
-        <p class="mb-0 fw-dark">&copy; 2025 <span class="fw-bold">Catatan Penjualan</span> | Powered by Laravel</p>
+        <p class="mb-0 fw-dark">&copy; 2025 <span class="fw-bold">Catatan Penjualan</span></p>
     </footer>
 @endsection

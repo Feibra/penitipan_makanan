@@ -13,7 +13,7 @@
             <form method="GET" action="{{ route('pengunjung.catatan') }}" class="mb-4">
                 <div class="input-group">
                     <input type="text" class="form-control" name="search" placeholder="Cari Catatan..." value="{{ request()->get('search') }}">
-                    <button class="btn btn-primary" type="submit">🔍 Cari</button>
+                    <button class="btn btn-primary" type="submit">Cari</button>
                 </div>
             </form>
 
@@ -50,6 +50,6 @@
 
 @section('footer')
     <footer class="text-center py-4 shadow mt-auto">
-        <p class="mb-0 fw-dark">&copy; 2025 <span class="fw-bold">Catatan Penjualan</span> | Powered by Laravel</p>
+        <p class="mb-0 fw-dark">&copy; 2025 <span class="fw-bold">Catatan Penjualan</span></p>
     </footer>
 @endsection

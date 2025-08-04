@@ -4,13 +4,13 @@
 <div class="card shadow-sm mt-4">
     <div class="card-body">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h4 class="mb-0">📋 Daftar Toko</h4>
+            <h4 class="mb-0">Daftar Toko</h4>
         </div>
 
         <form method="GET" action="{{ route('pengunjung.toko') }}" class="mb-4">
             <div class="input-group">
                 <input type="text" class="form-control" name="search" placeholder="Cari Nama Toko..." value="{{ request()->get('search') }}">
-                <button class="btn btn-primary" type="submit">🔍 Cari</button>
+                <button class="btn btn-primary" type="submit">Cari</button>
             </div>
         </form>
 
@@ -41,6 +41,6 @@
 
 @section('footer')
     <footer class="text-center py-4 shadow mt-auto">
-        <p class="mb-0 fw-dark">&copy; 2025 <span class="fw-bold">Catatan Penjualan</span> | Powered by Laravel</p>
+        <p class="mb-0 fw-dark">&copy; 2025 <span class="fw-bold">Catatan Penjualan</span></p>
     </footer>
 @endsection

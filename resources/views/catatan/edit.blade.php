@@ -4,7 +4,7 @@
 <div class="container mt-4 mb-4">
     <div class="card shadow-sm border-0">
         <div class="card-body">
-            <h2 class="mb-4 text-primary">📝 Edit Catatan Barang</h2>
+            <h2 class="mb-4 text-primary">Edit Catatan Barang</h2>
 
             <form action="{{ route('catatan.update', $catatan->id) }}" method="POST">
                 @csrf
@@ -51,6 +51,6 @@
 
 @section('footer')
     <footer class="text-center py-4 shadow mt-auto">
-        <p class="mb-0 fw-dark">&copy; 2025 <span class="fw-bold">Catatan Penjualan</span> | Powered by Laravel</p>
+        <p class="mb-0 fw-dark">&copy; 2025 <span class="fw-bold">Catatan Penjualan</span></p>
     </footer>
 @endsection
