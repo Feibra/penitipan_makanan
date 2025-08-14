@@ -42,6 +42,9 @@
                         @endforelse
                     </tbody>
                 </table>
+                <div class="d-flex justify-content-center">
+                    {{ $catatan->links() }}
+                </div>
             </div>
         </div>
     </div>

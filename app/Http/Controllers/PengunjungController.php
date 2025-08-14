@@ -11,16 +11,14 @@ class PengunjungController extends Controller
 {
     public function index()
     {
-        $toko = Toko::all(); // Tampilkan semua event
-        $catatanbarang = CatatanBarang::all();
+        $toko = Toko::paginate(10); // Tampilkan semua event
+        $catatanbarang = CatatanBarang::paginate(10);
         $userRegistrations = Auth::user()->registrations; // Ambil pendaftaran pengguna
         return view('pengunjung.dashboard', compact('toko', 'catatanbarang', 'userRegistrations'));
     }
 
     public function tokoPengunjung(Request $request)
 {
-    $toko = Toko::all();
-
     $query = Toko::query();
 
     // Cek apakah ada keyword search
@@ -28,15 +26,13 @@ class PengunjungController extends Controller
         $query->where('nama_toko', 'like', '%' . $request->search . '%');
     }
 
-    $toko = $query->get();
+    $toko = $query->paginate(10);
 
     return view('toko/toko_pengunjung', compact('toko'));
 }
 
 public function catatanPengunjung(Request $request)
 {
-    
-    $catatan = CatatanBarang::with('toko')->get();
 
     $query = CatatanBarang::with('toko');
 
@@ -47,7 +43,7 @@ public function catatanPengunjung(Request $request)
               ->orWhere('deskripsi', 'like', '%' . $request->search . '%');
     }
 
-    $catatan = $query->get();
+    $catatan = $query->paginate(10);
     
     return view('catatan/catatan_pengunjung', compact('catatan'));
 }

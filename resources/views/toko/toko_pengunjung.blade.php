@@ -34,6 +34,9 @@
                     @endif
                 </tbody>
             </table>
+            <div class="d-flex justify-content-center">
+                    {{ $toko->links() }}
+            </div>
         </div>
     </div>
 </div>

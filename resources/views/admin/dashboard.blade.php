@@ -31,6 +31,9 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="d-flex justify-content-center">
+                    {{ $toko->links() }}
+                </div>
             </div>
         </div>
     </div>
@@ -69,6 +72,9 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="d-flex justify-content-center">
+                    {{ $catatanbarang->links() }}
+                </div>
             </div>
         </div>
     </div>

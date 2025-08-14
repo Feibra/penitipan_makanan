@@ -11,15 +11,14 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $toko = Toko::all(); // Tampilkan semua 
-        $catatanbarang = CatatanBarang::all();
+        $toko = Toko::paginate(10); // Tampilkan semua 
+        $catatanbarang = CatatanBarang::paginate(10);
         $userRegistrations = Auth::user()->registrations; // Ambil pendaftaran pengguna
         return view('admin.dashboard', compact('toko', 'catatanbarang', 'userRegistrations'));
     }
 
     public function tokoAdmin(Request $request)
 {
-    $toko = Toko::all();
 
     $query = Toko::query();
 
@@ -28,15 +27,13 @@ class AdminController extends Controller
         $query->where('nama_toko', 'like', '%' . $request->search . '%');
     }
 
-    $toko = $query->get();
+    $toko = $query->paginate(10);
 
     return view('toko.index', compact('toko'));
 }
 
 public function catatanAdmin(Request $request)
 {
-    $catatan = CatatanBarang::with('toko')->get();
-
     $query = CatatanBarang::with('toko');
 
     // Cek apakah ada keyword search
@@ -46,7 +43,7 @@ public function catatanAdmin(Request $request)
               ->orWhere('deskripsi', 'like', '%' . $request->search . '%');
     }
 
-    $catatan = $query->get();
+    $catatan = $query->paginate(10);
 
     return view('catatan.index', compact('catatan'));
 }
