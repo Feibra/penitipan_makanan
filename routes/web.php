@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PengunjungController;
 use App\Http\Controllers\TokoController;
 use App\Http\Controllers\CatatanBarangController;
+use App\Http\Controllers\LaporanController;
 
 Route::resource('toko', TokoController::class);
 
@@ -33,3 +34,5 @@ Route::get('/catatan', [PengunjungController::class, 'catatanPengunjung'])->name
 Route::get('/admin/catatan', [AdminController::class, 'catatanAdmin'])->name('catatan.index');
 
 Route::get('/admin/toko', [AdminController::class, 'tokoAdmin'])->name('toko.index');
+
+Route::get('/laporan/pdf', [LaporanController::class, 'generatePDF'])->name('laporan.pdf');

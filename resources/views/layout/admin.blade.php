@@ -92,6 +92,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('toko.index') }}">Toko</a>
                 </li>
+                <li>
+                    <a class="nav-link" href="{{ route('laporan.pdf') }}" class="btn btn-danger">Laporan PDF</a>
+                </li>
             </ul>
 
             <ul class="navbar-nav ms-auto">
