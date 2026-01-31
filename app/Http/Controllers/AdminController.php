@@ -37,14 +37,21 @@ public function catatanAdmin(Request $request)
     $query = CatatanBarang::with('toko');
 
     // Cek apakah ada keyword search
-    if ($request->has('search') && $request->search != '') {
-        $query->where('nama_barang', 'like', '%' . $request->search . '%')
-              ->orwhere('tanggal', 'like', '%' . $request->search . '%')
-              ->orWhere('deskripsi', 'like', '%' . $request->search . '%');
+    if ($request->filled('search')) {
+        $search = $request->search;
+
+        $query->where(function ($q) use ($search) {
+            $q->where('nama_barang', 'like', "%$search%")
+              ->orWhere('tanggal', 'like', "%$search%")
+              ->orWhereHas('toko', function ($t) use ($search) {
+                  $t->where('nama_toko', 'like', "%$search%");
+              });
+        });
     }
 
     $catatan = $query->paginate(10);
+    $toko = Toko::all();
 
-    return view('catatan.index', compact('catatan'));
+    return view('catatan.index', compact('catatan', 'toko'));
 }
 }
